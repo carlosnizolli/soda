@@ -1,6 +1,6 @@
 FROM python:3.7-alpine
 
-RUN apt-get install g++ unixodbc-dev python3-dev libssl-dev libffi-dev
+RUN apk add g++ unixodbc-dev python3-dev libssl-dev libffi-dev
 RUN pip install soda-sql-postgresql
 COPY . .
 
