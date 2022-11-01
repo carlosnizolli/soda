@@ -1,3 +1,3 @@
 #!/bin/sh
-export DAYS=env_var(DAYS)
+export DAYS=$3
 soda scan $1 $2
