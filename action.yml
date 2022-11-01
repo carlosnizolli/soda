@@ -12,10 +12,15 @@ inputs:
   tests:
     description: 'Tests file'
     required: true    
-  
+ 
+   days:
+    description: 'Test Days'
+    required: true    
+    
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.warehouse }}
     - ${{ inputs.tests }}
+    - ${{ inputs.days }}
