@@ -1,3 +1,2 @@
 #!/bin/sh
-export DAYS=$3
-soda scan $1 $2
+soda scan $1 $2 -v DAYS=$3
