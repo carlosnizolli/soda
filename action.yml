@@ -13,7 +13,7 @@ inputs:
     description: 'Tests file'
     required: true    
  
-   days:
+  days:
     description: 'Test Days'
     required: true    
     
