@@ -1,0 +1,21 @@
+name: 'Soda SQL'
+description: 'Run Soda SQL Scan'
+branding:
+  icon: 'check-square'  
+  color: 'green'
+
+inputs:
+  warehouse:
+    description: 'Warehouse file'
+    required: true   
+    
+  tests:
+    description: 'Tests file'
+    required: true    
+  
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.warehouse }}
+    - ${{ inputs.tests }}
