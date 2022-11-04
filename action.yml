@@ -1,26 +1,31 @@
-name: 'Soda SQL'
-description: 'Run Soda SQL Scan'
+name: 'Soda Core'
+description: 'Run Soda Core Scan'
 branding:
   icon: 'check-square'  
   color: 'green'
 
 inputs:
-  warehouse:
-    description: 'Warehouse file'
+  dataset:
+    description: 'Dataset name'
     required: true   
     
-  tests:
-    description: 'Tests file'
+  configuration:
+    description: 'Configuration file'
     required: true    
  
   days:
     description: 'Test Days'
+    required: true    
+
+  checks:
+    description: 'Checks file'
     required: true    
     
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.warehouse }}
-    - ${{ inputs.tests }}
+    - ${{ inputs.dataset }}
+    - ${{ inputs.configuration }}
     - ${{ inputs.days }}
+    - ${{ inputs.checks }}
