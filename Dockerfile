@@ -22,9 +22,9 @@ RUN pip install pyodbc
 
 RUN wget https://download.dremio.com/arrow-flight-sql-odbc-driver/0.9.0/arrow-flight-sql-odbc-driver-0.9.0.116-1.x86_64.rpm -P /tmp/ 
 
-RUN alien -i /tmp/arrow-flight-sql-odbc-driver-LATEST.x86_64.rpm
+RUN alien -i /tmp/arrow-flight-sql-odbc-driver-0.9.0.116-1.x86_64.rpm 
 
-RUN rm /tmp/arrow-flight-sql-odbc-driver-LATEST.x86_64.rpm
+RUN rm /tmp/arrow-flight-sql-odbc-driver-0.9.0.116-1.x86_64.rpm 
 
 RUN pip install soda-core-dremio==3.0.10
 
