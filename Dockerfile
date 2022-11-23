@@ -26,7 +26,7 @@ RUN alien -i /tmp/arrow-flight-sql-odbc-driver-0.9.0.116-1.x86_64.rpm
 
 RUN rm /tmp/arrow-flight-sql-odbc-driver-0.9.0.116-1.x86_64.rpm 
 
-RUN pip install soda-core-dremio==3.0.10
+RUN pip install soda-core-dremio==3.0.13
 
 COPY . .
 
