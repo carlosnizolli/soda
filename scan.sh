@@ -1,2 +1,4 @@
 #!/bin/sh
-soda scan -v DAYS=$3 $1 $2
+export data_source=$1
+soda scan -d $1 -c $2 $3
+
