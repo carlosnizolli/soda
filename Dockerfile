@@ -5,6 +5,7 @@ LABEL maintainer="Carlos Nizolli carlosnizolli@gmail.com - Soda core scan"
 
 RUN  apt-get update 
 RUN  apt-get upgrade -y
+RUN  apt-get install python3.7
 RUN  apt-get install -y python3-pip 
 
 RUN pip install soda-core-postgres==3.0.17
