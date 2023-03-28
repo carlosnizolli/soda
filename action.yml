@@ -16,7 +16,19 @@ inputs:
   checks:
     description: 'Checks file'
     required: true    
+
+  month:
+    description: 'Month'
+    required: false   
     
+  date1:
+    description: 'date1'
+    required: false    
+ 
+  date2:
+    description: 'date2'
+    required: false    
+        
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -24,3 +36,6 @@ runs:
     - ${{ inputs.data_source }}
     - ${{ inputs.configuration }}
     - ${{ inputs.checks }}
+    - ${{ inputs.month }}
+    - ${{ inputs.date1 }}
+    - ${{ inputs.date2 }}    

@@ -8,9 +8,9 @@ RUN  apt-get upgrade -y
 RUN  apt-get install python3.7
 RUN  apt-get install -y python3-pip 
 
-RUN pip install soda-core-postgres==3.0.26
-RUN pip install soda-core-athena==3.0.26
-RUN pip install soda-core-scientific==3.0.26
+RUN pip install soda-core-postgres==3.0.30
+RUN pip install soda-core-athena==3.0.30
+RUN pip install soda-core-scientific==3.0.30
 COPY . .
 
 COPY scan.sh /scan.sh
